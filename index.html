@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SENTINEL-ID · AI Fake Identity & Document Screening · SIH 2026</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Your CSS -->
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ TOP NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home" data-tab="home">
+      <div class="brand-mark">S</div>
+      <div>SENTINEL-ID <small>SIH 2026 · PS 26188</small></div>
+    </a>
+    <div class="nav-links">
+      <a href="#home"      data-tab="home"      class="active">Overview</a>
+      <a href="#dashboard" data-tab="dashboard">Dashboard</a>
+      <a href="#scan"      data-tab="scan">Scan Document</a>
+      <a href="#verify"    data-tab="verify">Face Verify</a>
+      <a href="#alerts"    data-tab="alerts">Alerts</a>
+      <a href="#analytics" data-tab="analytics">Analytics</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#scan" data-tab="scan" class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Launch Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="tab active">
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Ministry of Home Affairs · Sashastra Seema Bal</span>
+        <h1>Stop forged passports at the <span>border,</span> before they cross it.</h1>
+        <p class="lead">SENTINEL-ID is an AI-powered screening system that inspects passports, visas and identity documents in under a second — catching photo tampering, MRZ manipulation, multi-identity abuse and blacklist matches human officers miss.</p>
+        <div class="hero-actions">
+          <a href="#scan" data-tab="scan" class="btn btn-primary"><i class="fa-solid fa-play"></i> Try Live Demo</a>
+          <a href="#pipeline-anchor" class="btn btn-ghost"><i class="fa-solid fa-diagram-project"></i> How it works</a>
+        </div>
+        <div class="hero-meta">
+          <div class="stat"><div class="n mono">0.8s</div><div class="l">Avg verdict latency</div></div>
+          <div class="stat"><div class="n mono">99.2%</div><div class="l">Forgery recall</div></div>
+          <div class="stat"><div class="n mono">14</div><div class="l">Fraud vectors</div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="passport-card">
+          <div class="pp-head">
+            <div>
+              <div class="type">TYPE / P · CODE / IND</div>
+              <div class="mono" style="font-size:.7rem; color:var(--muted); margin-top:2px">REPUBLIC OF INDIA</div>
+            </div>
+            <div class="flag"></div>
+          </div>
+          <div class="pp-body">
+            <div class="pp-photo"><div class="scan-line"></div></div>
+            <div>
+              <div class="pp-field"><div class="k">Surname</div><div class="v">VERMA</div></div>
+              <div class="pp-field"><div class="k">Given Names</div><div class="v">ROHAN</div></div>
+              <div class="pp-field"><div class="k">Passport No.</div><div class="v">M4820174</div></div>
+              <div class="pp-field"><div class="k">Nationality</div><div class="v">INDIAN</div></div>
+              <div class="pp-field"><div class="k">DOB</div><div class="v">14 MAR 1992</div></div>
+            </div>
+          </div>
+          <div class="mrz">P&lt;INDVERMA&lt;&lt;ROHAN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br/>M48201743IND9203148M2803152&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;06</div>
+        </div>
+        <div class="hero-badge">
+          <div class="ico"><i class="fa-solid fa-check"></i></div>
+          <div><div class="l">Authenticity</div><div class="v">98.4%</div></div>
+        </div>
+        <div class="hero-badge risk">
+          <div class="ico"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <div><div class="l">MRZ tamper</div><div class="v">0 flags</div></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="pipeline-anchor"></div>
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow"><span class="dot"></span> capabilities</span>
+      <h2>Fourteen fraud vectors. One verdict.</h2>
+      <p>Every scan is fused across OCR, MRZ math, computer vision, face-match and watchlist intelligence.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="ico"><i class="fa-solid fa-fingerprint"></i></div><h3>Document Forensics</h3><p>ELA-based photo tampering, dot-pattern analysis, hologram signature & paper-texture verification.</p></div>
+      <div class="feature"><div class="ico"><i class="fa-solid fa-barcode"></i></div><h3>MRZ / OCR Fusion</h3><p>Compares printed data against MRZ checksum with ICAO 9303 validation to catch altered fields.</p></div>
+      <div class="feature"><div class="ico"><i class="fa-solid fa-face-viewfinder"></i></div><h3>Live Face Match</h3><p>1:1 face comparison with liveness detection — passenger vs. document photo vs. e-visa record.</p></div>
+      <div class="feature"><div class="ico"><i class="fa-solid fa-user-group"></i></div><h3>Multi-Identity Detection</h3><p>Cross-checks biometric graphs to surface aliases used at other checkpoints.</p></div>
+      <div class="feature"><div class="ico"><i class="fa-solid fa-shield-halved"></i></div><h3>Watchlist Screening</h3><p>Interpol Red Notice, MHA blacklist and SSB watchlists queried in real-time with fuzzy matching.</p></div>
+      <div class="feature"><div class="ico"><i class="fa-solid fa-bolt"></i></div><h3>Edge-Ready</h3><p>Runs offline at remote checkpoints, syncs verdicts when connectivity returns. No cloud dependency.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="eyebrow"><span class="dot"></span> pipeline</span>
+      <h2>From scan to verdict in five stages.</h2>
+    </div>
+    <div class="pipeline">
+      <div class="pipe-step"><div class="n">01 · CAPTURE</div><h4>Document Scan</h4><p>Officer scans passport at booth</p></div>
+      <div class="pipe-step"><div class="n">02 · EXTRACT</div><h4>OCR + MRZ</h4><p>All fields parsed & checksum verified</p></div>
+      <div class="pipe-step"><div class="n">03 · ANALYSE</div><h4>Forgery CNN</h4><p>Tampering, holograms, paper analysed</p></div>
+      <div class="pipe-step"><div class="n">04 · CROSS-CHECK</div><h4>Face + Watchlist</h4><p>Live face vs. photo, blacklist queried</p></div>
+      <div class="pipe-step"><div class="n">05 · VERDICT</div><h4>Risk Score</h4><p>0-100 verdict + reasons for officer</p></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="dashboard" class="tab">
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> live feed · IGI T3 · New Delhi</span>
+        <h1>Screening Console</h1>
+        <div class="sub">Real-time overview for your shift.</div>
+      </div>
+      <div class="page-actions">
+        <a href="#scan" data-tab="scan" class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Scan</a>
+        <button class="btn btn-ghost"><i class="fa-solid fa-download"></i> Export shift log</button>
+      </div>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <div><h3>Live scan feed</h3><div class="sub">Last 10 verifications at your checkpoint</div></div>
+        <a href="#alerts" data-tab="alerts" class="btn btn-ghost btn-sm">View all alerts →</a>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Scan ID</th><th>Subject</th><th>Document</th><th>Country</th><th>Risk</th><th>Status</th><th>Time</th></tr></thead>
+          <tbody id="feedBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-head"><h3>This week — scans per day</h3><div class="sub mono">flags overlaid</div></div>
+        <div class="bar-chart-wrap"><div class="bar-chart" id="weeklyBars"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Officer performance</h3><div class="sub">your shift</div></div>
+        <div class="checks" style="margin-top:8px">
+          <div class="check-row"><div class="l"><i class="fa-solid fa-stopwatch" style="color:var(--amber)"></i> Avg processing time</div><span class="mono">42s / passenger</span></div>
+          <div class="check-row"><div class="l"><i class="fa-solid fa-flag-checkered" style="color:var(--green)"></i> Cleared without escalation</div><span class="mono">312</span></div>
+          <div class="check-row"><div class="l"><i class="fa-solid fa-triangle-exclamation" style="color:var(--red)"></i> Flagged & escalated</div><span class="mono">7</span></div>
+          <div class="check-row"><div class="l"><i class="fa-solid fa-user-check" style="color:var(--blue)"></i> Manual overrides</div><span class="mono">2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCAN ============ -->
+<section id="scan" class="tab">
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> screening pipeline</span>
+        <h1>Document Scan</h1>
+        <div class="sub">Upload or drop a passport/visa image. Try the two sample buttons →</div>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn-ghost" id="loadGenuine"><i class="fa-solid fa-flask"></i> Sample: Genuine</button>
+        <button class="btn btn-ghost" id="loadForged"><i class="fa-solid fa-flask"></i> Sample: Forged</button>
+      </div>
+    </div>
+
+    <div class="scan-grid">
+      <div>
+        <label for="fileIn" class="dropzone" id="dz">
+          <div class="ico"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <h3>Drop passport / visa here</h3>
+          <p>PNG or JPG · max 10MB · or click to browse</p>
+          <input id="fileIn" type="file" accept="image/*"/>
+        </label>
+
+        <div class="doc-preview">
+          <div class="panel-head" style="margin-bottom:12px">
+            <h3>Document preview</h3>
+            <span class="pill gray mono" id="docType">no document</span>
+          </div>
+          <div class="imgbox" id="imgBox">
+            <div class="empty" id="emptyMsg">📄 Waiting for document…</div>
+            <div class="scan-overlay" id="overlay">
+              <div class="box" data-l="PHOTO"  style="top:22%; left:6%;  width:22%; height:44%"></div>
+              <div class="box" data-l="MRZ"    style="top:78%; left:6%;  width:88%; height:14%"></div>
+              <div class="box" data-l="FIELDS" style="top:20%; left:32%; width:62%; height:52%"></div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" id="analyzeBtn" disabled><i class="fa-solid fa-microscope"></i> Run AI screening</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="result-block" id="results" style="display:none">
+          <div class="panel-head"><h3>Verdict</h3><span class="pill mono" id="verdictPill">—</span></div>
+          <div class="risk-meter">
+            <div class="bar"><div class="fill" id="riskFill"></div></div>
+            <div class="val"><span id="riskVal">0</span><small> / 100 risk score</small></div>
+          </div>
+          <div class="checks" id="checks"></div>
+          <div class="ocr-box" id="ocr"></div>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="clearBtn"><i class="fa-solid fa-check"></i> Clear Passenger</button>
+            <button class="btn btn-danger" id="flagBtn"><i class="fa-solid fa-flag"></i> Escalate & Detain</button>
+          </div>
+        </div>
+
+        <div class="panel" id="waitCard">
+          <div class="panel-head"><h3>Awaiting input</h3><span class="pill gray">idle</span></div>
+          <p style="color:var(--muted); font-size:.9rem">Once a document is loaded and screened, the AI verdict, extracted fields and 14-vector fraud analysis will appear here.</p>
+          <div class="checks" style="margin-top:14px">
+            <div class="check-row"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> OCR field extraction</div><span class="mono" style="color:var(--dim)">pending</span></div>
+            <div class="check-row"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> MRZ checksum (ICAO 9303)</div><span class="mono" style="color:var(--dim)">pending</span></div>
+            <div class="check-row"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Photo tampering (ELA)</div><span class="mono" style="color:var(--dim)">pending</span></div>
+            <div class="check-row"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Hologram signature</div><span class="mono" style="color:var(--dim)">pending</span></div>
+            <div class="check-row"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Watchlist cross-check</div><span class="mono" style="color:var(--dim)">pending</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VERIFY ============ -->
+<section id="verify" class="tab">
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> live face verification</span>
+        <h1>Passenger Verify</h1>
+        <div class="sub">Compare live capture with document photo and e-visa record.</div>
+      </div>
+    </div>
+
+    <div class="verify-grid">
+      <div class="panel">
+        <div class="panel-head"><h3>Session</h3><span class="pill amber mono">SC-88214</span></div>
+        <div class="field"><label>Passenger</label><input value="Rohan Verma"/></div>
+        <div class="field"><label>Passport / ID No.</label><input value="M4820174"/></div>
+        <div class="field"><label>Purpose of travel</label>
+          <select><option>Tourism</option><option>Business</option><option selected>Transit</option><option>Study</option></select>
+        </div>
+        <div class="field"><label>Onward flight</label><input value="AI 302 · DEL → SIN · 15:40"/></div>
+        <button class="btn btn-primary btn-block" id="startBtn"><i class="fa-solid fa-camera"></i> Start face verification</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Biometric match</h3><span class="pill gray mono" id="matchPill">idle</span></div>
+        <div class="face-compare">
+          <div class="face-box" id="liveBox">
+            <span class="tag">LIVE CAMERA</span>
+            <span id="liveTxt">📷 camera off</span>
+          </div>
+          <div class="face-box">
+            <span class="tag">DOC PHOTO</span>
+            <span>👤 stored</span>
+          </div>
+        </div>
+
+        <div class="risk-meter" style="margin-top:12px">
+          <div class="bar"><div class="fill" id="simFill" style="background:linear-gradient(90deg,var(--red),var(--amber),var(--green))"></div></div>
+          <div class="val"><span id="simVal">0</span><small>% similarity</small></div>
+        </div>
+
+        <div class="checks">
+          <div class="check-row" id="c1"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Face detected in live frame</div><span class="mono" style="color:var(--dim)">—</span></div>
+          <div class="check-row" id="c2"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Liveness (anti-spoof)</div><span class="mono" style="color:var(--dim)">—</span></div>
+          <div class="check-row" id="c3"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Embedding distance (ArcFace)</div><span class="mono" style="color:var(--dim)">—</span></div>
+          <div class="check-row" id="c4"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Cross-check with e-visa DB</div><span class="mono" style="color:var(--dim)">—</span></div>
+          <div class="check-row" id="c5"><div class="l"><i class="fa-regular fa-circle" style="color:var(--dim)"></i> Biometric watchlist (NCRB)</div><span class="mono" style="color:var(--dim)">—</span></div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary"><i class="fa-solid fa-check"></i> Approve & Stamp</button>
+          <button class="btn btn-danger"><i class="fa-solid fa-ban"></i> Deny Entry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALERTS ============ -->
+<section id="alerts" class="tab">
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> intelligence feed</span>
+        <h1>Alerts & Watchlist</h1>
+        <div class="sub">All flagged screenings and blacklist matches across your checkpoint.</div>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn-ghost"><i class="fa-solid fa-file-arrow-down"></i> Export CSV</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Watchlist Entry</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="filter-bar">
+        <div class="field"><label>Severity</label>
+          <select id="fSev"><option value="">All</option><option>critical</option><option>high</option><option>medium</option><option>low</option></select>
+        </div>
+        <div class="field"><label>Status</label>
+          <select id="fStat"><option value="">All</option><option>open</option><option>review</option><option>closed</option></select>
+        </div>
+        <div class="field" style="flex:2"><label>Search</label>
+          <input id="fSearch" placeholder="subject name or AL-ID"/>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Alert</th><th>Severity</th><th>Subject</th><th>Checkpoint</th><th>Time</th><th>Status</th><th></th></tr></thead>
+          <tbody id="alertsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANALYTICS ============ -->
+<section id="analytics" class="tab">
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> operational insights</span>
+        <h1>Analytics</h1>
+        <div class="sub">7-day rolling view of screenings, fraud patterns and checkpoint performance.</div>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi amber"><div class="l">Weekly scans <div class="ic"><i class="fa-solid fa-scale-balanced"></i></div></div><div class="v" id="wkScans">—</div><div class="d up">▲ 6.8% wow</div></div>
+      <div class="kpi red"><div class="l">Weekly flags <div class="ic"><i class="fa-solid fa-fire"></i></div></div><div class="v" id="wkFlags">—</div><div class="d down">▲ 12 vs last</div></div>
+      <div class="kpi blue"><div class="l">Flag rate <div class="ic"><i class="fa-solid fa-percent"></i></div></div><div class="v" id="wkRate">—</div><div class="d up">▼ 0.2 pp</div></div>
+      <div class="kpi green"><div class="l">SLA on-time <div class="ic"><i class="fa-solid fa-stopwatch"></i></div></div><div class="v">99.6%</div><div class="d up">▲ 0.1 pp</div></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="panel">
+        <div class="panel-head"><h3>Scans per day</h3><div class="sub mono">7-day rolling</div></div>
+        <div class="bar-chart-wrap"><div class="bar-chart" id="bars2"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Fraud vectors</h3><div class="sub mono">this week</div></div>
+        <div class="donut">
+          <svg viewBox="0 0 100 100" id="donut"><circle cx="50" cy="50" r="40" fill="none" stroke="#1F2A40" stroke-width="14"/></svg>
+          <div class="center"><div><div class="n" id="donutTotal">0</div><div class="l">total flags</div></div></div>
+        </div>
+        <div class="legend" id="legend"></div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <div class="panel-head"><h3>Checkpoint leaderboard</h3><div class="sub">by weekly volume</div></div>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Checkpoint</th><th>Scans</th><th>Flag rate</th><th>Avg latency</th><th>Officers</th><th>Trend</th></tr></thead>
+          <tbody>
+            <tr><td>IGI T3 · New Delhi</td><td class="mono">28,470</td><td><span class="pill amber">1.4%</span></td><td class="mono">812ms</td><td>34</td><td><span class="pill green">▲ 6%</span></td></tr>
+            <tr><td>Attari Land Border</td><td class="mono">11,320</td><td><span class="pill red">2.9%</span></td><td class="mono">1.1s</td><td>18</td><td><span class="pill red">▲ 14%</span></td></tr>
+            <tr><td>Petrapole · West Bengal</td><td class="mono">9,180</td><td><span class="pill red">3.4%</span></td><td class="mono">920ms</td><td>16</td><td><span class="pill amber">▲ 2%</span></td></tr>
+            <tr><td>Kolkata Airport</td><td class="mono">8,240</td><td><span class="pill amber">1.1%</span></td><td class="mono">760ms</td><td>12</td><td><span class="pill green">▲ 4%</span></td></tr>
+            <tr><td>Chennai Airport</td><td class="mono">7,020</td><td><span class="pill green">0.8%</span></td><td class="mono">690ms</td><td>10</td><td><span class="pill green">▲ 3%</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-inner">
+    <div>© 2026 · SENTINEL-ID · Built for SIH 2026 · Problem Statement 26188 · Ministry of Home Affairs</div>
+    <div class="mono" style="color:var(--dim)">v0.9.0-demo</div>
+  </div>
+</footer>
+
+<div class="toast-host" id="toastHost"></div>
+
+<!-- Your JS -->
+<script src="script.js"></script>
+</body>
+</html>
